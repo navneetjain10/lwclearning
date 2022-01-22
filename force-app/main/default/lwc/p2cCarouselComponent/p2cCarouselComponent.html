@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="Primitive data communication from parent to child">
+        <div class="slds-var-m-around_medium">
+    <lightning-carousel>
+       <template for:each={carouselDetails} for:item="carousel">
+        <lightning-carousel-image key={carousel.header}
+            src = {carousel.src}
+            header = {carousel.header}
+            description = {carousel.description}
+            alternative-text = {carousel.alternativetext}
+            href = {carousel.href}>
+        </lightning-carousel-image>
+    </template>
+    </lightning-carousel>
+</div>
+</lightning-card>
+</template>
