@@ -24,4 +24,10 @@ carouselData =[
         href:"javascript:void(0);"
     }
 ]
+
+    precentage =10
+    changeHandler(event){
+        this.precentage = event.target.value
+    }
+
 }

@@ -1,8 +1,21 @@
 <template>
+    <!--simple data pass example-->
     <c-p2c-alert-component 
     message=" Hay! I got the data"
     card-heading="Primitive data comms from parent to child"
     ></c-p2c-alert-component>
     <div class="slds-var-m-bottom_medium"></div>
+    <!--primitive data pass from parent to child-->
     <c-p2c-carousel-component carousel-details={carouselData}></c-p2c-carousel-component>
+
+    <div class="slds-var-m-bottom_medium"></div>
+    <!--pass data from parent to child on an action -->
+    <lightning-card>
+        <div class="slds-var-m-around_medium">
+            <lightning-input type="number" label="Enter precentage" onkeyup={changeHandler}></lightning-input>
+            <div class="slds-var-m-bottom_x-small"></div>
+            <c-p2c-progress-component progress-value={precentage}></c-p2c-progress-component>
+        </div>
+    </lightning-card>
+    
 </template>
