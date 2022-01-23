@@ -30,4 +30,8 @@ carouselData =[
         this.precentage = event.target.value
     }
 
+    clickHandler(event){
+        this.template.querySelector('c-p2c-slider-component').resetSlider()
+
+    }
 }
