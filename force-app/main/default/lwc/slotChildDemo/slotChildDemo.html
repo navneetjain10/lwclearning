@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Slot demo example child">
+        <div class="slds-var-m-around_medium">
+            <p>What is your name?</p>
+            <slot name="firstName"></slot>
+            <p>What is your age?</p>
+            <slot name="age"></slot>
+        </div>
+        <footer class="slds-card__footer slds-hide">
+            <slot name="footer" onslotchange={handleFooterChange}></slot>
+        </footer>
+    </lightning-card>
+</template>
