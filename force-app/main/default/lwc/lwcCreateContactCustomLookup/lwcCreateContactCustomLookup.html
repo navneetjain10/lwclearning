@@ -1,0 +1,13 @@
+<template>
+    <lightning-card class="slds-var-m-around_medium" title="Contact creation form with Account lookup">
+        <div class="slds-var-p-horizontal_small">
+            <lightning-input label="First Name" value={firstName} onchange={contactHandlerChange} class="slds-var-m-bottom_x-small slds-var-p-horizontal_small slds-form-element"></lightning-input>
+            <lightning-input label="Last Name" value={lastName} onchange={contactHandlerChange} class="slds-var-m-bottom_x-small slds-var-p-horizontal_small slds-form-element"></lightning-input>
+            <lightning-input label="Phone" value={phone} onchange={contactHandlerChange} class="slds-var-m-bottom_x-small slds-var-p-horizontal_small slds-form-element"></lightning-input>
+            <lightning-input label="Email" value={email} onchange={contactHandlerChange} class="slds-var-m-bottom_x-small slds-var-p-horizontal_small slds-form-element"></lightning-input>
+
+            <c-lwc-account-custom-lookup onselected={lookupHandler}></c-lwc-account-custom-lookup>
+            <lightning-button label="Submit" variant="brand" onclick={createLookupContact} class="slds-var-m-bottom_x-small slds-var-p-horizontal_small slds-form-element"></lightning-button>
+        </div>
+    </lightning-card>
+</template>
